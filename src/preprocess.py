@@ -7,6 +7,9 @@ from nltk.stem import PorterStemmer
 
 nltk.download('punkt')
 nltk.download('stopwords')
+nltk.download('punkt_tab')
+
+
 
 def clean_text(text):
     if pd.isna(text):
