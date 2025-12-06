@@ -3,7 +3,6 @@ Lien de l'application :
 https://fakenewsappapp-ejfwcv7cwnmh53ve3kqkw5.streamlit.app/
 
 ### Dépôt GitHub :
-https://github.com/diabateyoussouf/FakeNewsStreamlitApp
 
 ### Description :
 Application de détection de fake news utilisant un modèle SVM entraîné et l'API Mistral AI. Interface développée avec Streamlit.
