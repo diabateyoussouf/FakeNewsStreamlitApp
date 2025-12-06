@@ -1,0 +1,15 @@
+body {
+    background-color: #F4F6F9;
+    color: #0A2A43;
+}
+
+.chat-bot {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.chat-user {
+    background: #1C3D5A;
+    color: white;
+}

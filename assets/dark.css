@@ -1,0 +1,14 @@
+body {
+    background-color: #0D1117;
+    color: #E6EDF3;
+}
+
+.chat-bot {
+    background: #161B22;
+    border: 1px solid #30363D;
+}
+
+.chat-user {
+    background: #0052A4;
+    color: white;
+}
