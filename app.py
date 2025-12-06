@@ -6,6 +6,36 @@ from utils.ui import display_header, display_chat, display_input, display_sideba
 from utils.process import process_user_input
 import os
 
+import sys
+import os
+
+# Chemin NLTK spécifique pour Streamlit Cloud
+NLTK_DATA_PATH = '/home/appuser/nltk_data'
+os.makedirs(NLTK_DATA_PATH, exist_ok=True)
+
+# Ajouter au chemin NLTK
+import nltk
+nltk.data.path.append(NLTK_DATA_PATH)
+
+# Forcer le téléchargement si manquant
+try:
+    nltk.data.find('tokenizers/punkt_tab/english')
+    print("✅ punkt_tab already installed", file=sys.stderr)
+except LookupError:
+    print("🚨 punkt_tab missing! Downloading...", file=sys.stderr)
+    try:
+        # Télécharger avec retry
+        import urllib.request
+        import ssl
+        ssl._create_default_https_context = ssl._create_unverified_context
+        
+        nltk.download('punkt_tab', quiet=False)
+        print("✅ punkt_tab downloaded successfully", file=sys.stderr)
+    except Exception as e:
+        print(f"❌ Failed to download punkt_tab: {e}", file=sys.stderr)
+        # Fallback: utiliser un tokenizer simple
+        print("⚠️ Using fallback tokenizer", file=sys.stderr)
+
 # Au lieu de dotenv, utilisez les secrets Streamlit
 api_key = st.secrets.get("MISTRAL_API_KEY", os.getenv("MISTRAL_API_KEY"))
 
