@@ -2,7 +2,7 @@
 Lien de l'application :
 https://fakenewsappapp-ejfwcv7cwnmh53ve3kqkw5.streamlit.app/
 
-<img width="556" height="314" alt="image" src="https://github.com/user-attachments/assets/7ecb61df-bd1b-4301-bb30-e4876d62ca45" />
+<img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/7ecb61df-bd1b-4301-bb30-e4876d62ca45" />
 
 ### Dépôt GitHub :
 
